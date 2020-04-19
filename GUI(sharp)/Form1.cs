@@ -26,8 +26,15 @@ namespace GUI_sharp_
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            triangle = new Triangle(Double.Parse(textBox_a.Text), Double.Parse(textBox_b.Text), Double.Parse(textBox_c.Text));
-            MessageBox.Show(triangle.ToString());
+            try
+            {
+                triangle = new Triangle(Double.Parse(textBox_a.Text), Double.Parse(textBox_b.Text), Double.Parse(textBox_c.Text));
+                MessageBox.Show(triangle.ToString());
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
 
         private void isExistsButton_Click(object sender, EventArgs e)

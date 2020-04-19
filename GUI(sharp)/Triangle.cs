@@ -15,13 +15,13 @@ namespace GUI_sharp_
         public double B { get => b; set => b = value; }
         public double C { get => c; set => c = value; }
 
-        public Triangle(double a, double b, double c) 
+        public Triangle(double a, double b, double c) //конструктор с параметрами
         {
             A = a;
             B = b;
             C = c;
         }
-        public Triangle()
+        public Triangle()//конструктор без параметров
         {
 
         }

@@ -8,7 +8,7 @@ namespace GUI_sharp_
 {
     class Right_Triangle : Triangle
     {
-        public Right_Triangle(double a, double b, double c)
+        public Right_Triangle(double a, double b, double c)//конструктор
         {
             A = a;
             B = b;

@@ -25,14 +25,17 @@ namespace GUI_sharp_
 
         private void InitButton_Click(object sender, EventArgs e)
         {
-            int N = Convert.ToInt32(textBox_Quantity_N.Text);
-            Triangles[] N_triangles = new Triangles[N];
+            try
+            {
+                int N = Convert.ToInt32(textBox_Quantity_N.Text);
+                Triangles[] N_triangles = new Triangles[N];
 
-            int M = Convert.ToInt32(textBox_Quantity_M.Text);
-            Triangles[] M_triangles = new Triangles[M];
-
+                int M = Convert.ToInt32(textBox_Quantity_M.Text);
+                Triangles[] M_triangles = new Triangles[M];
+           
             triangles.getTriangles(N_triangles);
             triangles.getRight_triangleTriangles(M_triangles);
+
             
             for (int i = 0; i < N_triangles.Length; i++)
             {
@@ -43,12 +46,17 @@ namespace GUI_sharp_
                 textBox_infoM.Text += $"a[{i + 1}] = {M_triangles[i].a}cm, b[{i + 1}] = {M_triangles[i].b}cm, c[{i + 1}] = {String.Format("{0:0.00}", M_triangles[i].c)}cm;        ";
             }
 
+
               labelMAX_number.Text = $"{triangles.getMAXsquare(N_triangles) + 1}";
               textBox_maxS.Text =  $" S = {N_triangles[triangles.getMAXsquare(N_triangles)].squares} cm^2";
 
             labelMIN_number.Text = $"{triangles.getMinHypotenuse(M_triangles) + 1}";
                textBox_minGipotenus.Text = $" c = {String.Format("{0:0.00}", M_triangles[triangles.getMinHypotenuse(M_triangles)].c)} cm";
- 
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
 
     }

@@ -25,8 +25,16 @@ namespace GUI_sharp_
 
         private void SaveButton2_Click(object sender, EventArgs e)
         {
-            right_triangle = new Right_Triangle(Double.Parse(textBox_a.Text), Double.Parse(textBox_b.Text), Double.Parse(textBox_c.Text));
-            MessageBox.Show(right_triangle.ToString());
+            try
+            {
+                right_triangle = new Right_Triangle(Double.Parse(textBox_a.Text), Double.Parse(textBox_b.Text), Double.Parse(textBox_c.Text));
+                MessageBox.Show(right_triangle.ToString());
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
             if (right_triangle.isExists())
             {
                 if (right_triangle.getRight_triangle())
