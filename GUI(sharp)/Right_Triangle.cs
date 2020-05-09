@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GUI_sharp_
+﻿namespace GUI_sharp_
 {
-    class Right_Triangle : Triangle
+    internal class Right_Triangle : Triangle
     {
-        public Right_Triangle(double a, double b, double c)//конструктор
+        public Right_Triangle(double a, double b, double c) : base(a, b, c)
         {
-            A = a;
-            B = b;
-            C = c;
+
         }
-        public Right_Triangle()
+        public Right_Triangle() : base()
         {
 
         }
@@ -22,13 +14,15 @@ namespace GUI_sharp_
         {
             return "a = " + this.a + "; \nb = " + this.b + "; \nc = " + this.c + ";";
         }
-            public bool getRight_triangle()
+        public bool isRight_triangle()
+        {
+            if (a * a + b * b == c * c || b * b + c * c == a * a || c * c + a * a == b * b)
             {
-                if (a * a + b * b == c * c || b * b + c * c == a * a || c * c + a * a == b * b)
-                    return true;
-                else
-                    return false;
+                return true;
             }
-        
+
+            return false;
+        }
+
     }
 }

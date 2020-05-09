@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GUI_sharp_
 {
-    class Triangles
+    internal class Triangles
     {
-        public double side, h, squares, a, b, c;
+        public double side, h, squares;
         public void getTriangles(Triangles[] N_triangles)
         {
             Random r = new Random();
@@ -27,29 +23,37 @@ namespace GUI_sharp_
             for (int i = 0; i < N_triangles.Length; i++)
             {
                 if (N_triangles[max].squares < N_triangles[i].squares)
+                {
                     max = i;
+                }
             }
             return max;
         }
-       
-        public void getRight_triangleTriangles(Triangles[] M_triangles)
+
+        public void getRight_triangleTriangles(Right_Triangle[] M_right_triangle)
         {
             Random r = new Random();
-            for (int i = 0; i < M_triangles.Length; i++)
+            for (int i = 0; i < M_right_triangle.Length; i++)
             {
-                M_triangles[i] = new Triangles();
-                M_triangles[i].a = r.Next(2, 10);
-                M_triangles[i].b = r.Next(2, 10);
-                M_triangles[i].c = Math.Sqrt(M_triangles[i].a * M_triangles[i].a + M_triangles[i].b * M_triangles[i].b);
+                M_right_triangle[i] = new Right_Triangle();
+                do
+                {
+                    M_right_triangle[i].a = r.Next(2, 10);
+                    M_right_triangle[i].b = r.Next(2, 10);
+                    M_right_triangle[i].c = Math.Sqrt(M_right_triangle[i].a * M_right_triangle[i].a + M_right_triangle[i].b * M_right_triangle[i].b);
+                }
+                while (!M_right_triangle[i].isRight_triangle());
             }
         }
-        public int getMinHypotenuse(Triangles[] M_triangles)
+        public int getMinHypotenuse(Right_Triangle[] M_right_triangle)
         {
             int min = 0;
-            for (int i = 0; i < M_triangles.Length; i++)
+            for (int i = 0; i < M_right_triangle.Length; i++)
             {
-                if (M_triangles[min].c > M_triangles[i].c)
+                if (M_right_triangle[min].c > M_right_triangle[i].c)
+                {
                     min = i;
+                }
             }
             return min;
         }

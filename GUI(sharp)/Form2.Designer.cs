@@ -41,6 +41,7 @@
             this.side_value_a = new System.Windows.Forms.Label();
             this.textBox_a = new System.Windows.Forms.TextBox();
             this.backButton1 = new System.Windows.Forms.Button();
+            this.OpenFileButton2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ExitButton2
@@ -172,12 +173,23 @@
             this.backButton1.UseVisualStyleBackColor = false;
             this.backButton1.Click += new System.EventHandler(this.backButton1_Click);
             // 
+            // OpenFileButton2
+            // 
+            this.OpenFileButton2.Location = new System.Drawing.Point(403, 302);
+            this.OpenFileButton2.Name = "OpenFileButton2";
+            this.OpenFileButton2.Size = new System.Drawing.Size(121, 54);
+            this.OpenFileButton2.TabIndex = 28;
+            this.OpenFileButton2.Text = "Open file";
+            this.OpenFileButton2.UseVisualStyleBackColor = true;
+            this.OpenFileButton2.Click += new System.EventHandler(this.OpenFileButton2_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(895, 450);
+            this.Controls.Add(this.OpenFileButton2);
             this.Controls.Add(this.backButton1);
             this.Controls.Add(this.textBox_c);
             this.Controls.Add(this.textBox_b);
@@ -214,5 +226,6 @@
         private System.Windows.Forms.Label side_value_a;
         private System.Windows.Forms.TextBox textBox_a;
         private System.Windows.Forms.Button backButton1;
+        private System.Windows.Forms.Button OpenFileButton2;
     }
 }

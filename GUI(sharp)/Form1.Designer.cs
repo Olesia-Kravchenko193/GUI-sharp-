@@ -59,9 +59,9 @@
             // 
             this.ExitButton.BackColor = System.Drawing.Color.Red;
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitButton.Location = new System.Drawing.Point(43, 391);
+            this.ExitButton.Location = new System.Drawing.Point(46, 380);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(116, 36);
+            this.ExitButton.Size = new System.Drawing.Size(130, 46);
             this.ExitButton.TabIndex = 0;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -71,16 +71,16 @@
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title.Location = new System.Drawing.Point(29, 44);
+            this.title.Location = new System.Drawing.Point(28, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(275, 25);
+            this.title.Size = new System.Drawing.Size(164, 50);
             this.title.TabIndex = 1;
-            this.title.Text = "Введите стороны треугольника";
+            this.title.Text = "Введите стороны \r\n  треугольника";
             // 
             // textBox_a
             // 
             this.textBox_a.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_a.Location = new System.Drawing.Point(90, 110);
+            this.textBox_a.Location = new System.Drawing.Point(90, 73);
             this.textBox_a.Name = "textBox_a";
             this.textBox_a.Size = new System.Drawing.Size(86, 26);
             this.textBox_a.TabIndex = 2;
@@ -89,7 +89,7 @@
             // 
             this.side_value_a.AutoSize = true;
             this.side_value_a.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.side_value_a.Location = new System.Drawing.Point(29, 102);
+            this.side_value_a.Location = new System.Drawing.Point(29, 65);
             this.side_value_a.Name = "side_value_a";
             this.side_value_a.Size = new System.Drawing.Size(55, 35);
             this.side_value_a.TabIndex = 3;
@@ -99,7 +99,7 @@
             // 
             this.side_value_b.AutoSize = true;
             this.side_value_b.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.side_value_b.Location = new System.Drawing.Point(28, 167);
+            this.side_value_b.Location = new System.Drawing.Point(27, 111);
             this.side_value_b.Name = "side_value_b";
             this.side_value_b.Size = new System.Drawing.Size(67, 35);
             this.side_value_b.TabIndex = 4;
@@ -109,7 +109,7 @@
             // 
             this.side_value_c.AutoSize = true;
             this.side_value_c.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.side_value_c.Location = new System.Drawing.Point(27, 234);
+            this.side_value_c.Location = new System.Drawing.Point(29, 161);
             this.side_value_c.Name = "side_value_c";
             this.side_value_c.Size = new System.Drawing.Size(65, 35);
             this.side_value_c.TabIndex = 5;
@@ -118,7 +118,7 @@
             // textBox_b
             // 
             this.textBox_b.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_b.Location = new System.Drawing.Point(90, 175);
+            this.textBox_b.Location = new System.Drawing.Point(90, 119);
             this.textBox_b.Name = "textBox_b";
             this.textBox_b.Size = new System.Drawing.Size(86, 26);
             this.textBox_b.TabIndex = 6;
@@ -126,7 +126,7 @@
             // textBox_c
             // 
             this.textBox_c.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_c.Location = new System.Drawing.Point(90, 242);
+            this.textBox_c.Location = new System.Drawing.Point(90, 169);
             this.textBox_c.Name = "textBox_c";
             this.textBox_c.Size = new System.Drawing.Size(86, 26);
             this.textBox_c.TabIndex = 7;
@@ -135,9 +135,9 @@
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SaveButton.Location = new System.Drawing.Point(33, 317);
+            this.SaveButton.Location = new System.Drawing.Point(60, 222);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(143, 45);
+            this.SaveButton.Size = new System.Drawing.Size(116, 39);
             this.SaveButton.TabIndex = 8;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             // 
             this.isExistsButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.isExistsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.isExistsButton.Location = new System.Drawing.Point(410, 28);
+            this.isExistsButton.Location = new System.Drawing.Point(333, 12);
             this.isExistsButton.Name = "isExistsButton";
             this.isExistsButton.Size = new System.Drawing.Size(221, 56);
             this.isExistsButton.TabIndex = 9;
@@ -159,7 +159,7 @@
             // 
             this.PerimeterButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.PerimeterButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PerimeterButton.Location = new System.Drawing.Point(440, 284);
+            this.PerimeterButton.Location = new System.Drawing.Point(371, 270);
             this.PerimeterButton.Name = "PerimeterButton";
             this.PerimeterButton.Size = new System.Drawing.Size(155, 46);
             this.PerimeterButton.TabIndex = 10;
@@ -171,7 +171,7 @@
             // 
             this.SquareButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.SquareButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SquareButton.Location = new System.Drawing.Point(440, 162);
+            this.SquareButton.Location = new System.Drawing.Point(371, 146);
             this.SquareButton.Name = "SquareButton";
             this.SquareButton.Size = new System.Drawing.Size(156, 49);
             this.SquareButton.TabIndex = 11;
@@ -181,14 +181,14 @@
             // 
             // textBox_isExists
             // 
-            this.textBox_isExists.Location = new System.Drawing.Point(410, 108);
+            this.textBox_isExists.Location = new System.Drawing.Point(333, 93);
             this.textBox_isExists.Name = "textBox_isExists";
             this.textBox_isExists.Size = new System.Drawing.Size(221, 22);
             this.textBox_isExists.TabIndex = 12;
             // 
             // textBox_Square
             // 
-            this.textBox_Square.Location = new System.Drawing.Point(512, 236);
+            this.textBox_Square.Location = new System.Drawing.Point(440, 222);
             this.textBox_Square.Name = "textBox_Square";
             this.textBox_Square.Size = new System.Drawing.Size(83, 22);
             this.textBox_Square.TabIndex = 13;
@@ -197,7 +197,7 @@
             // 
             this.label_Square.AutoSize = true;
             this.label_Square.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Square.Location = new System.Drawing.Point(459, 232);
+            this.label_Square.Location = new System.Drawing.Point(386, 222);
             this.label_Square.Name = "label_Square";
             this.label_Square.Size = new System.Drawing.Size(48, 25);
             this.label_Square.TabIndex = 14;
@@ -205,7 +205,7 @@
             // 
             // textBox_Perimeter
             // 
-            this.textBox_Perimeter.Location = new System.Drawing.Point(512, 350);
+            this.textBox_Perimeter.Location = new System.Drawing.Point(440, 341);
             this.textBox_Perimeter.Name = "textBox_Perimeter";
             this.textBox_Perimeter.Size = new System.Drawing.Size(82, 22);
             this.textBox_Perimeter.TabIndex = 15;
@@ -214,7 +214,7 @@
             // 
             this.label_Perimeter.AutoSize = true;
             this.label_Perimeter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Perimeter.Location = new System.Drawing.Point(459, 347);
+            this.label_Perimeter.Location = new System.Drawing.Point(386, 337);
             this.label_Perimeter.Name = "label_Perimeter";
             this.label_Perimeter.Size = new System.Drawing.Size(47, 25);
             this.label_Perimeter.TabIndex = 16;
@@ -329,6 +329,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
