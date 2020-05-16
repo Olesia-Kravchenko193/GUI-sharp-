@@ -12,16 +12,12 @@ namespace GUI_sharp_
 {
     public partial class Form1 : Form
     {
-       
+        OpenFileDialog open = new OpenFileDialog();
+        SaveFileDialog save = new SaveFileDialog();
         Triangle triangle = new Triangle();
         public Form1()
         {
-            InitializeComponent();
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            InitializeComponent();          
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -60,16 +56,67 @@ namespace GUI_sharp_
 
         private void AngleButton_Click(object sender, EventArgs e)
         {
-            textBox_Angle1.Text = $"{String.Format("{0:0.00}", triangle.getAngle1().ToString())} градусов";
-            textBox_Angle2.Text = $"{String.Format("{0:0.00}", triangle.getAngle2().ToString())} градусов";
-            textBox_Angle3.Text = $"{ String.Format("{0:0.00}", triangle.getAngle3().ToString())} градусов";
+            textBox_Angle1.Text = $"{String.Format("{0:0.00}", triangle.getAngle1())} градусов";
+            textBox_Angle2.Text = $"{String.Format("{0:0.00}", triangle.getAngle2())} градусов";
+            textBox_Angle3.Text = $"{ String.Format("{0:0.00}", triangle.getAngle3())} градусов";
         }
 
         private void TransitionButton1_Click(object sender, EventArgs e)
         {
+            save.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+            DialogResult result = MessageBox.Show("Сохранить значения в файл?", "", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = save.FileName;
+                    string[] temp = { "Triangle: ", textBox_a.Text, textBox_b.Text, textBox_c.Text, textBox_isExists.Text, "S = " + textBox_Square.Text, "P = " + textBox_Perimeter.Text, textBox_Angle1.Text, textBox_Angle2.Text, textBox_Angle3.Text + "\n" };
+
+                    System.IO.File.WriteAllLines(filename, temp);
+                    MessageBox.Show("Файл сохранен");
+                }
+            }
             this.Hide();
             Form2 form2 = new Form2();
             form2.Show();
         }
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            save.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+            DialogResult result = MessageBox.Show("Сохранить значения в файл?", "", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = save.FileName;
+                    string[] temp = { "Triangle: ", textBox_a.Text, textBox_b.Text, textBox_c.Text, textBox_isExists.Text, "S = " + textBox_Square.Text, "P = " + textBox_Perimeter.Text, textBox_Angle1.Text, textBox_Angle2.Text, textBox_Angle3.Text + "\n" };
+
+                    System.IO.File.WriteAllLines(filename, temp);
+                    MessageBox.Show("Файл сохранен");
+                }
+            }
+            Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            open.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+            DialogResult result = MessageBox.Show("Загрузить значения из файла?", "", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = open.FileName;
+
+                    textBox_a.Text = System.IO.File.ReadLines(filename).Skip(1).FirstOrDefault();
+                    textBox_b.Text = System.IO.File.ReadLines(filename).Skip(2).FirstOrDefault();
+                    textBox_c.Text = System.IO.File.ReadLines(filename).Skip(3).FirstOrDefault();
+                }
+            }
+        }
+
     }
 }
